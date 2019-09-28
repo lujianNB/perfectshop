@@ -1,0 +1,206 @@
+.footernav {
+    height: 328px;
+    width: 100%;
+    background-color: white;
+    >div {
+        width: 1190px;
+        height: 328px;
+        margin: 0 auto;
+        >div:nth-child(1) {
+            width: 1190px;
+            height: 90px;
+            >ul {
+                width: 1190px;
+                height: 90px;
+                padding-top: 22.5px;
+                >li {
+                    float: left;
+                    width: 295px;
+                    height: 45px;
+                    line-height: 45px;
+                    font-size: 18px;
+                    color: #999;
+                    text-indent: 150px;
+                    position: relative;
+                    border-right: 1px solid #ddd;
+                }
+                >li:nth-child(1) {
+                    &::after {
+                        content: '';
+                        display: block;
+                        width: 45px;
+                        height: 45px;
+                        background: url(../../img/indexi.image/about.png) no-repeat 0 0;
+                        position: absolute;
+                        top: 0;
+                        left: 100px;
+                    }
+                }
+                >li:nth-child(2) {
+                    &::after {
+                        content: '';
+                        display: block;
+                        width: 45px;
+                        height: 45px;
+                        background: url(../../img/indexi.image/about.png) no-repeat -45px 0;
+                        position: absolute;
+                        top: 0;
+                        left: 100px
+                    }
+                }
+                >li:nth-child(3) {
+                    &::after {
+                        content: '';
+                        display: block;
+                        width: 45px;
+                        height: 45px;
+                        background: url(../../img/indexi.image/about.png) no-repeat -90px 0;
+                        position: absolute;
+                        top: 0;
+                        left: 100px
+                    }
+                }
+                >li:nth-child(4) {
+                    border: none;
+                    &::after {
+                        content: '';
+                        display: block;
+                        width: 45px;
+                        height: 45px;
+                        background: url(../../img/indexi.image/about.png) no-repeat -135px 0;
+                        position: absolute;
+                        top: 0;
+                        left: 100px
+                    }
+                }
+                &::after {
+                    content: '';
+                    display: block;
+                    clear: both;
+                }
+            }
+        }
+        >div:nth-child(2) {
+            width: 1190px;
+            height: 200px;
+            &::after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+            >div {
+                float: left;
+                width: 296px;
+                height: 200px;
+                font-size: 14px;
+            }
+            >div:nth-child(1) {
+                >p {
+                    text-align: center;
+                    padding: 10px 0;
+                }
+                >a {
+                    text-align: center;
+                    width: 60px;
+                    display: block;
+                    margin: 0 auto;
+                    padding: 5px 0;
+                    font-size: 12px;
+                    color: #bbb;
+                    &:hover {
+                        color: red;
+                    }
+                }
+            }
+            >div:nth-child(2) {
+                >p {
+                    text-align: center;
+                    padding: 10px 0;
+                }
+                >a {
+                    text-align: center;
+                    width: 60px;
+                    display: block;
+                    margin: 0 auto;
+                    padding: 5px 0;
+                    font-size: 12px;
+                    color: #bbb;
+                    &:hover {
+                        color: red;
+                    }
+                }
+            }
+            >div:nth-child(3) {
+                >p {
+                    text-align: center;
+                    padding: 10px 0;
+                }
+                >a {
+                    text-align: center;
+                    width: 60px;
+                    display: block;
+                    margin: 0 auto;
+                    padding: 5px 0;
+                    font-size: 12px;
+                    color: #bbb;
+                    &:hover {
+                        color: red;
+                    }
+                }
+            }
+            >div:nth-child(4) {
+                >p:nth-child(1) {
+                    font-size: 18px;
+                    text-align: center;
+                    padding: 10px 0;
+                }
+                >p:nth-child(2) {
+                    font-size: 12px;
+                    text-align: center;
+                    padding: 10px 0;
+                    color: #bbb;
+                }
+                >a:nth-of-type(1) {
+                    display: block;
+                    width: 156px;
+                    height: 37px;
+                    line-height: 37px;
+                    border: 1px solid red;
+                    border-radius: 2px;
+                    margin: 0 auto;
+                    text-indent: 60px;
+                    color: red;
+                    position: relative;
+                    >span {
+                        position: absolute;
+                        top: 10px;
+                        left: 40px;
+                        display: block;
+                        width: 18px;
+                        height: 15px;
+                        background: url(../../img/indexi.image/base.png) no-repeat -189px 0;
+                    }
+                    &:hover {
+                        color: white;
+                        background-color: red;
+                        >span {
+                            background: url(../../img/indexi.image/base.png) no-repeat -242px 0;
+                        }
+                    }
+                }
+                >a:nth-of-type(2) {
+                    text-align: center;
+                    width: 60px;
+                    display: block;
+                    margin: 0 auto;
+                    padding: 5px 0;
+                    font-size: 12px;
+                    color: #bbb;
+                    &:hover {
+                        color: red;
+                    }
+                }
+            }
+        }
+    }
+}

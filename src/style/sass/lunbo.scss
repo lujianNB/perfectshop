@@ -1,0 +1,75 @@
+.banner {
+    width: 100%;
+    height: 439px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    .imgbox {
+        width: 100%;
+        height: 439px;
+        position: relative;
+        background-color: #222;
+        overflow: hidden;
+        .img {
+            position: absolute;
+            display: none;
+        }
+        .im {
+            display: block
+        }
+    }
+    .change {
+        width: 47px;
+        height: 80px;
+        display: block;
+        position: absolute;
+        z-index: 20;
+        opacity: .4;
+        transition: .4s;
+        top: 50%;
+        margin-top: -50px;
+        &:hover {
+            opacity: 1
+        }
+    }
+    .prev {
+        background-image: url(../../img/indexi.image/base.png);
+        background-repeat: no-repeat;
+        background-position: 0 -20px;
+        left: 19%
+    }
+    .next {
+        background-image: url(../../img/indexi.image/base.png);
+        background-repeat: no-repeat;
+        background-position: -47px -20px;
+        right: 19%
+    }
+    .cirbox {
+        width: 88px;
+        position: absolute;
+        bottom: 30px;
+        z-index: 10;
+        left: 50%;
+        margin-left: -44px;
+        cursor: pointer;
+        .cir {
+            width: 12px;
+            height: 12px;
+            background-color: white;
+            opacity: .4;
+            float: left;
+            border-radius: 6px;
+            margin: 0 5px;
+            cursor: pointer;
+            .cir:hover {
+                background-color: red;
+            }
+        }
+        .cr {
+            background-color: red;
+            .cr:hover {
+                background-color: red
+            }
+        }
+    }
+}

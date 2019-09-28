@@ -1,0 +1,43 @@
+@charset "utf-8";
+@import './header.scss';
+@import './nav.scss';
+@import './lunbo.scss';
+@import './guanggao.scss';
+@import './Dota2.scss';
+@import './dianjing.scss';
+@import './youxizhoubian.scss';
+@import './footernav.scss';
+@import './footer.scss';
+@import './rightnav.scss';
+@import './login.scss';
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+a {
+    text-decoration: none
+}
+
+li {
+    list-style: none;
+}
+
+em {
+    font-style: normal
+}
+
+.gouwuxuanting {
+    width: 350px;
+    height: 105px;
+    background-color: #eee;
+    line-height: 105px;
+    text-align: center;
+    position: absolute;
+    right: 356.5px;
+    color: black;
+    z-index: 1000;
+    display: none;
+    font-size: 12px;
+}

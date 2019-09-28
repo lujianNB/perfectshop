@@ -1,0 +1,205 @@
+@charset "utf-8";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.bg {
+    height: 916px;
+    width: 100%;
+    background: url(../../img/reg.image/animate-bg.jpg) no-repeat 0 0/100% 100%;
+    padding-top: 30px;
+    >div {
+        width: 818px;
+        height: 916px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 5;
+        >a {
+            display: block;
+            width: 98px;
+            height: 35px;
+            background: url(../../img/reg.image/logo.png) no-repeat 0 0/100% 100%;
+        }
+        >div {
+            width: 818px;
+            height: 733px;
+            background: #eee;
+            margin-top: 60px;
+            padding-top: 60px;
+            padding: 60px 211px 0 211px;
+            position: relative;
+            >h1 {
+                font-weight: normal;
+                text-align: center;
+            }
+            >p {
+                font-size: 12px;
+                text-align: center;
+                color: #ccc;
+                margin-top: 6px;
+                margin-bottom: 20px;
+            }
+            >a {
+                display: inline-block;
+                width: 198px;
+                height: 46px;
+                text-align: center;
+                line-height: 46px;
+            }
+            .xuanzhong {
+                color: white;
+                background: red;
+            }
+            .weixuanzhong {
+                color: #555;
+                background: #999;
+            }
+            >span {
+                position: absolute;
+                left: 615px;
+            }
+            >span:nth-of-type(1) {
+                top: 215px
+            }
+            >span:nth-of-type(2) {
+                top: 275px
+            }
+            >span:nth-of-type(3) {
+                top: 335px
+            }
+            >span:nth-of-type(4) {
+                top: 450px
+            }
+            >div {
+                position: absolute;
+                left: 211px;
+                top: 210px;
+                width: 396px;
+                input {
+                    width: 396px;
+                    height: 37px;
+                    border: none;
+                    outline: none;
+                    text-indent: 10px;
+                    border: 1px solid #ccc;
+                }
+                #submit,
+                #tijiao {
+                    color: white;
+                    background: red;
+                    font-size: 18px;
+                }
+                a {
+                    display: block;
+                    width: 396px;
+                    height: 37px;
+                    color: #333;
+                    background: white;
+                    border: 1px solid #ccc;
+                    line-height: 37px;
+                    text-align: center;
+                    font-size: 18px;
+                }
+            }
+            .show {
+                display: block;
+            }
+            .hide {
+                display: none;
+            }
+        }
+    }
+}
+
+header {
+    >p {
+        text-align: center;
+        color: #999;
+        font-size: 12px;
+        padding: 5px 0;
+    }
+    >p:nth-child(1) {
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        >a {
+            color: #999
+        }
+    }
+    >div {
+        width: 236px;
+        margin: 20px auto;
+        &::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        >div {
+            float: left;
+            width: 108px;
+            height: 40px;
+        }
+        >div:nth-child(1) {
+            background: url(../../img/reg.image/bot_img1.png) no-repeat 0 0/100% 100%;
+            margin-right: 20px;
+        }
+        >div:nth-child(2) {
+            background: url(../../img/reg.image/bot_img2.png) no-repeat 0 0/100% 100%;
+        }
+    }
+}
+
+.xuanzhuan1 {
+    width: 613px;
+    height: 613px;
+    background: url(../../img/reg.image/circle-1.png) no-repeat 0 0/cover;
+    position: absolute;
+    top: 270px;
+    left: 250px;
+    transform-style: preserve-3d;
+    animation-name: xuanzhuan1;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite
+}
+
+.xuanzhuan2 {
+    width: 616px;
+    height: 616px;
+    background: url(../../img/reg.image/circle-2.png) no-repeat 0 0/cover;
+    position: absolute;
+    top: 50px;
+    right: -300px;
+    transform-style: preserve-3d;
+    animation-name: xuanzhuan2;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite
+}
+
+@keyframes xuanzhuan1 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes xuanzhuan2 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}

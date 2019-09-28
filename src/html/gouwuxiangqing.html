@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOTA2神秘商店 - 官方周边商城</title>
+    <link rel="stylesheet" href="../style/sass/gouwuxiangqing.min.css">
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+    <script src="../js/cookie.js"></script>
+    <script src="../js/jquery.md5.js"></script>
+    <script src="../js/gouwuxiangqing.js"></script>
+</head>
+
+<body>
+    <header>
+        <div>
+            <img src="../img/gouwuxiangqing/logo-dota2.png" alt="">
+            <img src="../img/gouwuxiangqing/logo-shop.png" alt="">
+            <a href="../html/gouwuche.html"><span></span>我的购物车(0)<div><div>购物车里暂无商品</div></div></a>
+            <a href=""><span></span>我的关注</a>
+            <a href=""><span></span>我的订单</a>
+            <a href="./zhuce.html">快速注册</a>
+            <a href="javaScript:;" id="denglu">登录</a>
+        </div>
+        <div>
+            <a href="">首页</a>
+            <a href="">特别&限量</a>
+            <a href="">手办&毛绒</a>
+            <a href="">主题服饰</a>
+            <a href="">饰品</a>
+            <a href="">生活用品</a>
+            <a href="">T恤</a>
+            <a href="">鼠标垫</a>
+            <a href="">手机壳</a>
+            <span></span>
+            <input type="text">
+        </div>
+    </header>
+    <!-- 渲染区域 -->
+    <nav class="one">
+
+    </nav>
+    <div id="xiangqing">
+        <div class="two">
+            <!-- 轮播图 -->
+
+        </div>
+    </div>
+    <!-- 底部导航 -->
+    <div class="footernav">
+        <div>
+            <div>
+                <ul>
+                    <li>正品保证</li>
+                    <li>轻松购物</li>
+                    <li>快速配送</li>
+                    <li>无忧退换</li>
+                </ul>
+            </div>
+            <div>
+                <div>
+                    <p>购物指南</p>
+                    <a href="">常见问题</a>
+                    <a href="">订单状态</a>
+                    <a href="">购物流程</a>
+                    <a href="">支付方式</a>
+                </div>
+                <div>
+                    <p>服务售后</p>
+                    <a href="">退换货政策</a>
+                    <a href="">发票政策</a>
+                </div>
+                <div>
+                    <p>关注我们</p>
+                    <a href="">公司官网</a>
+                    <a href="">商务合作</a>
+                </div>
+                <div>
+                    <p>028-68723699</p>
+                    <p>周一至周日 9:00-22:00</p>
+                    <a href=""><span></span>在线客服</a>
+                    <a href="">投诉举报</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 底部 -->
+    <footer>
+        <p><a href="">公司介绍</a
+                >丨<a href="">开发团队</a
+                >丨<a href="">招聘信息</a
+                >丨<a href="">联系我们</a
+                >丨<a href="">完美世界隐私政策</a
+                >丨<a href="">完美世界用户协议</a
+                >丨<a href="">完美商城服务协议</a
+                >丨<a href="">Cookie政策</a
+                >丨<a href="">纠纷处理</a
+                >丨<a href="">网站地图</a>
+        </p>
+        <p>京ICP证：050016号 <a class="yingye">营业执照</a> 《网络文化经营许可证》编号：文网文【2017】8929-1007号《网络视听许可证》编号：0110587 京公网安备11010502033859号 </p>
+        <p>©完美世界 版权所有　Perfect World. All Rights Reserved.</p>
+
+        <div>
+            <img src="../img/indexi.image/copyright01.jpg" alt="">
+            <img src="../img/indexi.image/copyright02.jpg" alt="">
+            <img src="../img/indexi.image/copyright03.jpg" alt="">
+            <img src="../img/indexi.image/copyright04.jpg" alt="">
+            <img src="../img/indexi.image/copyright05.jpg" alt="">
+        </div>
+    </footer>
+    <!-- 右边导航 -->
+    <div class="rightnav">
+        <a href=""><span></span></a>
+        <a href=""><span></span></a>
+        <a href="../html/gouwuche.html"><span></span>&nbsp;<br>购<br>物<br>车<span>0</span></a>
+        <a href=""><span></span></a>
+        <a href="./index1.html">返回首页</a>
+    </div>
+    <!-- 快速登录 -->
+    <!-- 实现登录功能  以及登录弹窗的跳出与消失 -->
+    <script>
+        //   以及登录弹窗的跳出与消失
+        $(function() {
+            $('#denglu').on('click', function() {
+                $('.login').addClass('chuxian').removeClass('xiaoshi');
+            })
+            $('.chadiao').on('click', function() {
+                    $('.login').addClass('xiaoshi').removeClass('chuxian')
+                    $('#username').val('');
+                    $('#password').val('');
+                })
+                // 实现登录功能
+            $("#sub").on('click', function() {
+                $.ajax({
+                    url: "./denglu.php",
+                    type: "GET",
+                    data: {
+                        "phone": $.md5($("#username").val() + ''),
+                        "password": $.md5($("#password").val() + '')
+                    },
+                    success: function(data) {
+                        if (data == 1) {
+                            cookie.set('isLogin', 'true', 1);
+                            cookie.set('username', $("#username").val(), 1);
+                            $('#denglu').html(cookie.get('username'));
+                            // 通过trigger触发差掉的事件
+                            $('.chadiao').trigger('click');
+                        } else if (data == 2) {
+                            $("#p").html("密码不正确")
+                        } else if (data == 3) {
+                            $("#p").html("账号不存在")
+                        }
+                    }
+                })
+            })
+        })
+    </script>
+    <div class="login">
+        <p>快速登录<span class="chadiao">×</span></p>
+        用户名：<input type="text" name="phone" id="username"><br><br>密码：&nbsp;&nbsp;
+        <input type="password" name="password" id="password"><br><br>
+        <input type="submit" value="登录" id="sub"><br><span id="p" style="color: red"></span>
+    </div>
+    <!-- 购物车弹框 -->
+    <div class="jiaru">
+        <p>提示<span>×</span></p>
+        <div><span></span>商品已加入到购物车</div>
+        <a href="">继续购物</a><a href="../html/gouwuche.html?">去购物车看看</a>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+.login {
+  border: 1px solid #ccc;
+  background: white;
+  text-align: center;
+  width: 367px;
+  height: 350px;
+  position: fixed;
+  top: 300px;
+  left: 50%;
+  margin-left: -250px;
+  z-index: 1000;
+  display: none;
+}
+
+.login > p {
+  height: 50px;
+  line-height: 50px;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.login > p > span {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  display: block;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+}
+
+.login > input {
+  width: 300px;
+  height: 50px;
+  border: 1px solid #ccc;
+}
+
+.login > input:nth-of-type(3) {
+  width: 100px;
+  background: blue;
+  color: white;
+  font-size: 22px;
+  border: none;
+}
+
+.xiaoshi {
+  display: none;
+}
+
+.chuxian {
+  display: block;
+}

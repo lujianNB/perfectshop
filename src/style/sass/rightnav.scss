@@ -1,0 +1,165 @@
+.rightnav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 35px;
+    height: 100%;
+    background: black;
+    >a {
+        display: block;
+        position: absolute;
+        left: 0;
+    }
+    >a:nth-child(1) {
+        top: 350px;
+        width: 35px;
+        height: 35px;
+        padding: 8.5px;
+        >span {
+            display: block;
+            width: 18px;
+            height: 18px;
+            background: url(../../img/indexi.image/base.png) no-repeat -228px -74px;
+        }
+        >em {
+            display: block;
+            width: 85px;
+            height: 35px;
+            color: white;
+            text-align: center;
+            line-height: 35px;
+            position: absolute;
+            top: 0;
+            left: -150px;
+            opacity: 0;
+            transition: all 1s;
+            background: url(../../img/indexi.image/base.png) no-repeat -95px -90px;
+        }
+        &:hover {
+            background: red;
+            >em {
+                left: -76px;
+                opacity: 1;
+            }
+        }
+    }
+    >a:nth-child(2) {
+        top: 390px;
+        width: 35px;
+        height: 35px;
+        padding: 8.5px;
+        >span {
+            display: block;
+            width: 19px;
+            height: 16px;
+            background: url(../../img/indexi.image/base.png) no-repeat -228px -41px;
+        }
+        >em {
+            display: block;
+            width: 85px;
+            height: 35px;
+            color: white;
+            text-align: center;
+            line-height: 35px;
+            position: absolute;
+            top: 0;
+            left: -150px;
+            opacity: 0;
+            transition: all 1s;
+            background: url(../../img/indexi.image/base.png) no-repeat -95px -90px;
+        }
+        &:hover {
+            background: red;
+            >em {
+                left: -76px;
+                opacity: 1;
+            }
+        }
+    }
+    >a:nth-child(3) {
+        top: 430px;
+        width: 35px;
+        height: 136px;
+        color: white;
+        font-size: 14px;
+        padding: 6.5px;
+        text-align: center;
+        border-top: 1px solid #333;
+        border-bottom: 1px solid #333;
+        >span:nth-of-type(1) {
+            display: block;
+            width: 22px;
+            height: 18px;
+            background: url(../../img/indexi.image/base.png) no-repeat -162px -20px;
+        }
+        >span:nth-of-type(2) {
+            display: block;
+            width: 21px;
+            height: 21px;
+            border-radius: 50%;
+            color: white;
+            background: red;
+        }
+        &:hover {
+            background: red;
+            >span:nth-of-type(2) {
+                background: black;
+            }
+            >span:nth-of-type(1) {
+                background: url(../../img/indexi.image/base.png) no-repeat -162px -37px;
+            }
+        }
+    }
+    >a:nth-child(4) {
+        top: 575px;
+        width: 35px;
+        height: 35px;
+        padding: 8.5px;
+        >span {
+            display: block;
+            width: 18px;
+            height: 17px;
+            background: url(../../img/indexi.image/base.png) no-repeat -228px -57px;
+        }
+        >em {
+            display: block;
+            width: 85px;
+            height: 35px;
+            color: white;
+            text-align: center;
+            line-height: 35px;
+            position: absolute;
+            top: 0;
+            left: -150px;
+            opacity: 0;
+            transition: all 1s;
+            background: url(../../img/indexi.image/base.png) no-repeat -95px -90px;
+        }
+        &:hover {
+            background: red;
+            >em {
+                left: -76px;
+                opacity: 1;
+            }
+        }
+    }
+    >a:nth-child(5) {
+        top: 900px;
+        width: 35px;
+        height: 35px;
+        color: white;
+        font-size: 14px;
+        text-align: center;
+        &::before {
+            content: '';
+            display: block;
+            width: 18px;
+            height: 8px;
+            margin: 0 auto;
+            background: url(../../img/indexi.image/base.png) no-repeat -232px -21px
+        }
+        &:hover {
+            background: red;
+        }
+    }
+}
