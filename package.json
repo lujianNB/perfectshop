@@ -1,15 +1,24 @@
 {
   "name": "perfectshop",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^4.0.2"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lujianNB/perfectshop.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
-  "devDependencies": {
-    "gulp": "^4.0.2"
-  }
+  "bugs": {
+    "url": "https://github.com/lujianNB/perfectshop/issues"
+  },
+  "homepage": "https://github.com/lujianNB/perfectshop#readme"
 }
